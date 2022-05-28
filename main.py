@@ -2,7 +2,6 @@ from Test.CustomerTest import CustomerTest
 
 if __name__ == '__main__':
     customer = CustomerTest()
-    customer.login(username='kehu2', password='1234')
     customer.go_to_delegation()
     customer.new_delegation()
     customer.go_to_new_delegation()

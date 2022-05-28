@@ -5,6 +5,7 @@ class CustomerTest(TestBase):
     def __init__(self, deployed=False, server=''):
         # TODO: change server if deployed
         super().__init__(deployed, server)
+        super().login(username='kehu2', password='1234')
 
     def go_to_delegation(self):
         # TODO: fix xpath if menu is changed
