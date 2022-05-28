@@ -1,7 +1,7 @@
 from Test.CustomerTest import CustomerTest
 
-if __name__ == '__main__':
-    customer = CustomerTest()
+
+def customer_new_delegation(customer):
     customer.go_to_delegation()
     customer.new_delegation()
     customer.go_to_new_delegation()
@@ -10,4 +10,8 @@ if __name__ == '__main__':
     customer.fill_function_list()
     customer.submit_delegation()
     customer.go_to_delegation()
-    # test.log_out()
+
+
+if __name__ == '__main__':
+    customer = CustomerTest()
+    customer_new_delegation(customer)
