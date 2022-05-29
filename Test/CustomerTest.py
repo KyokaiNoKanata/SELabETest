@@ -399,3 +399,12 @@ class CustomerTest(TestBase):
             xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[2]/form/div[4]/div[2]/div/div/span/input',
             text='线上')
         self.click_full_xpath(xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[3]/div/div/div[2]/button')
+
+    def audit_report(self):
+        self.go_to_sidebar_item(index1=7, index2=3)
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr/td[6]/div/div/a/button')
+        self.scroll_to_top()
+        self.click_full_xpath(xpath='/html/body/div[1]/div/section/div/main/div/div[1]/div[2]/div[1]/div[1]/div/div[6]')
+        self.click_full_xpath(xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/a/button')
