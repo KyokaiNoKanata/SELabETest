@@ -11,18 +11,14 @@ def random_string(length):
 
 
 class TestBase(object):
-    def __init__(self, deployed=False, server=''):
-        # TODO: change server if deployed
+    def __init__(self):
         self.driver = webdriver.Chrome()
-        if not deployed:
-            self.driver.get("http://localhost:8000")
-        else:
-            self.driver.get(server)
+        self.driver.get("http://localhost:8000")
         self.wait()
 
     def wait(self):
         time.sleep(1)
-        self.driver.implicitly_wait(10)
+        self.driver.implicitly_wait(20)
 
     def scroll_to_top(self):
         self.wait()
@@ -33,7 +29,7 @@ class TestBase(object):
         self.wait()
         self.driver.find_element(by=By.XPATH, value=xpath).click()
 
-    def click_full_css(self, css):
+    def click_css_selector(self, css):
         self.wait()
         self.driver.find_element(by=By.CSS_SELECTOR, value=css).click()
 
@@ -41,6 +37,10 @@ class TestBase(object):
         self.wait()
         self.driver.find_element(by=By.XPATH, value=xpath).clear()
         self.driver.find_element(by=By.XPATH, value=xpath).send_keys(text)
+
+    def go_to_sidebar_item(self, index1, index2):
+        self.click_full_xpath(xpath=f'/html/body/div[1]/div/section/aside/div/div[1]/ul/li[{index1}]/div/span')
+        self.click_full_xpath(xpath=f'/html/body/div[1]/div/section/aside/div/div[1]/ul/li[{index1}]/ul/li[{index2}]')
 
     def login(self, username='kehu2', password='1234'):
         self.input_into_xpath(xpath='/html/body/div[1]/div/div[2]/div/div[2]/form/div[2]/div/div/div/span/input',

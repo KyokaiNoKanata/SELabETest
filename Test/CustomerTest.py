@@ -2,24 +2,20 @@ from Test.TestBase import TestBase, random_string
 
 
 class CustomerTest(TestBase):
-    def __init__(self, deployed=False, server=''):
-        super(CustomerTest, self).__init__(deployed, server)
+    def __init__(self):
+        super(CustomerTest, self).__init__()
         self.login(username='kehu2', password='1234')
 
     def go_to_delegation(self):
-        self.click_full_xpath(xpath='/html/body/div[1]/div/section/aside/div/div[1]/ul/li[3]/div')
-        self.click_full_xpath(xpath='/html/body/div[1]/div/section/aside/div/div[1]/ul/li[3]/ul/li[1]/span')
+        self.go_to_sidebar_item(index1=3, index2=1)
 
     def go_to_function_list(self):
         self.scroll_to_top()
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[1]/div[2]/div[1]/div[1]/div/div[2]')
 
-    def go_to_pricing(self):
-        self.click_full_xpath(xpath='/html/body/div[1]/div/section/aside/div/div[1]/ul/li[3]/div')
-        self.click_full_xpath(xpath='/html/body/div[1]/div/section/aside/div/div[1]/ul/li[3]/ul/li[8]/span')
-
     def accept_pricing(self):
+        self.go_to_sidebar_item(index1=3, index2=8)
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
                   '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
@@ -135,7 +131,7 @@ class CustomerTest(TestBase):
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
                   '2]/div/div/div/div[2]/div/div/div[2]/form/div[3]/div/div[2]/div/div/div[3]/div/div['
                   '2]/div/div/div/div/span[1]/input')
-        self.click_full_css(
+        self.click_css_selector(
             css='body > div:nth-child(10) > div > div > div > div.rc-virtual-list > div.rc-virtual-list-holder > div '
                 '> div > div:nth-child(2)')
         # 运行环境
@@ -325,8 +321,58 @@ class CustomerTest(TestBase):
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/form/div['
                   '4]/div[2]/button')
-
-    def submit_delegation(self):
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/form/div['
                   '4]/div[3]/button')
+
+    def check_contract(self):
+        self.go_to_sidebar_item(index1=4, index2=4)
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr/td[6]/div/div/a/button')
+        self.scroll_to_top()
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[1]/div[2]/div[1]/div[1]/div/div[3]')
+        # 意见
+        self.input_into_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/form/div[1]/div/div/div/div['
+                  '2]/div/div/span/input',
+            text='这是好的')
+        # 是否通过
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/form/div[2]/div/div/div/div['
+                  '2]/div/div/div/div/span[1]/input')
+        self.click_css_selector(
+            css='body > div:nth-child(8) > div > div > div > div.rc-virtual-list > div.rc-virtual-list-holder > div > '
+                'div > div.ant-select-item.ant-select-item-option.ant-pro-filed-search-select-option.ant-select-item'
+                '-option-active')
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/form/div[3]/button[2]')
+
+    def fill_contract(self):
+        self.go_to_sidebar_item(index1=4, index2=3)
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr/td[6]/div/div/a/button')
+        # 保密协议
+        self.input_into_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div['
+                  '1]/form/article/div[1]/div[1]/div/div/div[2]/div/div/span/input',
+            text='委托方')
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div['
+                  '1]/form/div/div[2]/button')
+        self.scroll_to_top()
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[1]/div[2]/div[1]/div[1]/div/div[2]/div')
+        # 合同第一页
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div['
+                  '1]/div/div/div/div[2]/div/div/div[3]/div/div/button')
+        # 签章
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div['
+                  '1]/div/div/div/div[2]/div/div/div[3]/div/div/div/div/div[2]/button')
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div['
+                  '1]/div/div/div/div[2]/div/div/div[3]/div/div/div/div/div[3]/button')

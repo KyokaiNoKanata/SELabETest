@@ -6,11 +6,8 @@ class TestingTest(TestBase):
         super(TestingTest, self).__init__()
         self.login(username='ceshibu2', password='1234')
 
-    def go_to_delegation(self):
-        self.click_full_xpath(xpath='/html/body/div[1]/div/section/aside/div/div[1]/ul/li[3]/div')
-        self.click_full_xpath(xpath='/html/body/div[1]/div/section/aside/div/div[1]/ul/li[3]/ul/li[6]')
-
     def audit_delegation(self):
+        self.go_to_sidebar_item(index1=3, index2=6)
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
                   '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
@@ -39,7 +36,7 @@ class TestingTest(TestBase):
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
                   '2]/div/div/div[2]/div/div/div[1]/form/div[2]/div/div[3]/div/div/div[2]/div/div[2]/div['
                   '1]/div/div/div/input')
-        self.click_full_css(
+        self.click_css_selector(
             css='body > div:nth-child(8) > div > div > div > div > div.ant-picker-date-panel > div.ant-picker-body > '
                 'table > tbody > tr:nth-child(1) > td:nth-child(2)')
         self.click_full_xpath(
@@ -61,7 +58,7 @@ class TestingTest(TestBase):
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
                   '2]/div/div/div[2]/div/div/div[4]/form/div/div/div[2]/div/div[2]/div/div/div/div/span[1]/input')
-        self.click_full_css(
+        self.click_css_selector(
             css='body > div:nth-child(9) > div > div > div > div.rc-virtual-list > div.rc-virtual-list-holder > div > '
                 'div > div.ant-select-item.ant-select-item-option.ant-pro-filed-search-select-option.ant-select-item'
                 '-option-active')
