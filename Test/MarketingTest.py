@@ -79,3 +79,35 @@ class MarketingTest(TestBase):
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div['
                   '1]/div/div/div/div[2]/div/div/div[3]/div/div/div/div/div[3]/button')
+
+    def audit_contract(self):
+        self.go_to_sidebar_item(index1=4, index2=5)
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr/td[6]/div/div/a/button')
+        self.scroll_to_top()
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[1]/div[2]/div[1]/div[1]/div/div[3]')
+        self.input_into_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/form/div[1]/div/div/div/div['
+                  '2]/div/div/span/input',
+            text='通过')
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/form/div[2]/div/div/div/div['
+                  '2]/div/div/div/div/span[1]/input')
+        self.click_css_selector(
+            css='body > div:nth-child(8) > div > div > div > div.rc-virtual-list > div.rc-virtual-list-holder > div > '
+                'div > div.ant-select-item.ant-select-item-option.ant-pro-filed-search-select-option.ant-select-item'
+                '-option-active')
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/form/div[3]/button[2]')
+
+    def upload_contract(self):
+        self.go_to_sidebar_item(index1=4, index2=1)
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[7]/div/div/button')
+        self.upload_into_xpath(
+            xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[2]/form/div/div/div/span/div[1]',
+            file='C:\\Users\\Yui\\OneDrive\\图片\\Kaguya.jpg')
+        self.click_full_xpath(xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[3]/div/div/div[2]/button')

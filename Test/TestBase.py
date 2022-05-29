@@ -2,6 +2,7 @@ import random
 import string
 import time
 
+from pywinauto import Desktop
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -37,6 +38,17 @@ class TestBase(object):
         self.wait()
         self.driver.find_element(by=By.XPATH, value=xpath).clear()
         self.driver.find_element(by=By.XPATH, value=xpath).send_keys(text)
+
+    def upload_into_xpath(self, xpath, file):
+        self.wait()
+        self.click_full_xpath(xpath=xpath)
+        app = Desktop()
+        dialog = app.window(title='Open')
+        dialog.wait('visible', timeout=10)
+        dialog.set_focus()
+        dialog.Edit.set_text(file)
+        time.sleep(1)
+        dialog.Open.click()
 
     def go_to_sidebar_item(self, index1, index2):
         self.click_full_xpath(xpath=f'/html/body/div[1]/div/section/aside/div/div[1]/ul/li[{index1}]/div/span')
