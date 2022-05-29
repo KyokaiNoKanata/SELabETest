@@ -248,3 +248,39 @@ class TestingTest(TestBase):
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div/div/div[2]/div/div/div[6]/div/div/div/div/div['
                   '4]/button')
+
+    def fill_document(self):
+        self.go_to_sidebar_item(index1=7, index2=1)
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
+        # 测试用例
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
+                  '2]/div/form/button')
+        self.scroll_to_top()
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[1]/div[2]/div[1]/div[1]/div/div[2]')
+        # 测试记录
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
+                  '2]/div/form/button')
+        self.scroll_to_top()
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[1]/div[2]/div[1]/div[1]/div/div[3]')
+        # 问题清单
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
+                  '2]/div/form/div[2]/div[1]/button')
+        self.scroll_to_top()
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[1]/div[2]/div[1]/div[1]/div/div[4]')
+        # 测试报告
+        self.click_full_xpath(xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/a/button')
+        self.scroll_to_top()
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[1]/div[2]/div[1]/div[1]/div/div[3]')
+        # 提交
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
+                  '2]/div/form/div[2]/div[2]/button')
