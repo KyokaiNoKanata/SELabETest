@@ -1,4 +1,4 @@
-from Test.TestingTest import TestingTest
+from QualityTest import QualityTest
 
 
 def customer_new_delegation(customer):
@@ -14,9 +14,10 @@ def customer_new_delegation(customer):
 if __name__ == '__main__':
     # c = CustomerTest()
     # ms = MarketingSupervisorTest()
-    # m = MarketingTest()
-    t = TestingTest()
     # ts = TestingSupervisorTest()
+    # m = MarketingTest()
+    # t = TestingTest()
+    q = QualityTest()
     # customer_new_delegation(c)
     # ms.distribute_delegation()
     # ts.distribute_delegation()
@@ -32,4 +33,5 @@ if __name__ == '__main__':
     # c.upload_sample()
     # m.audit_sample()
     # t.audit_sample()
-    t.fill_solution()
+    # t.fill_solution()
+    q.audit_solution()
