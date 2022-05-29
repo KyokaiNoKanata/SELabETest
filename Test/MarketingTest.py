@@ -111,3 +111,14 @@ class MarketingTest(TestBase):
             xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[2]/form/div/div/div/span/div[1]',
             file='C:\\Users\\Yui\\OneDrive\\图片\\Kaguya.jpg')
         self.click_full_xpath(xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[3]/div/div/div[2]/button')
+
+    def audit_sample(self):
+        self.go_to_sidebar_item(index1=5, index2=2)
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
+        self.input_into_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/form/div/div[7]/div/div[2]/div[2]/div/div/textarea',
+            text='审核通过')
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/form/div/div[7]/div/div[3]/div/div[2]/button')

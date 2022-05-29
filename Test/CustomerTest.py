@@ -89,7 +89,8 @@ class CustomerTest(TestBase):
         # 测试依据-其他
         self.input_into_xpath(xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div['
                                     '2]/div/div/div[1]/div[2]/div/div/div/div[2]/div/div/div[2]/form/div[1]/div['
-                                    '1]/div/div/div[2]/div/div/div[2]/div/div/span/input', text='其他依据')
+                                    '1]/div/div/div[2]/div/div/div[2]/div/div/span/input',
+                              text='其他依据')
         # 需要测试的技术指标
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
@@ -181,17 +182,20 @@ class CustomerTest(TestBase):
         self.input_into_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
                   '2]/div/div/div/div[2]/div/div/div[2]/form/div[4]/div/div[2]/div[2]/div/div[2]/div/div[2]/div/div['
-                  '2]/div[1]/div/div[4]/div/div[2]/div/div/span/input', text='DB')
+                  '2]/div[1]/div/div[4]/div/div[2]/div/div/span/input',
+            text='DB')
         # 中间件
         self.input_into_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
                   '2]/div/div/div/div[2]/div/div/div[2]/form/div[4]/div/div[2]/div[2]/div/div[2]/div/div[2]/div/div['
-                  '2]/div[1]/div/div[5]/div/div[2]/div/div/span/input', text='Middleware')
+                  '2]/div[1]/div/div[5]/div/div[2]/div/div/span/input',
+            text='Middleware')
         # 其他支撑软件
         self.input_into_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
                   '2]/div/div/div/div[2]/div/div/div[2]/form/div[4]/div/div[2]/div[2]/div/div[2]/div/div[2]/div/div['
-                  '2]/div[1]/div/div[6]/div/div[2]/div/div/span/input', text='Others')
+                  '2]/div[1]/div/div[6]/div/div[2]/div/div/span/input',
+            text='Others')
         # 构架
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
@@ -376,3 +380,22 @@ class CustomerTest(TestBase):
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div['
                   '1]/div/div/div/div[2]/div/div/div[3]/div/div/div/div/div[3]/button')
+
+    def upload_sample(self):
+        self.go_to_sidebar_item(index1=5, index2=1)
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr/td[6]/div/div/button')
+        self.upload_into_xpath(
+            xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[2]/form/div[1]/div/div/span/div[1]/span/button',
+            file='C:\\Users\\Yui\\OneDrive\\图片\\Kaguya.jpg')
+        self.input_into_xpath(
+            xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[2]/form/div[2]/div[2]/div/div/span/input',
+            text='HouraisanKaguya')
+        self.input_into_xpath(
+            xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[2]/form/div[3]/div[2]/div/div/span/input',
+            text='处理方式')
+        self.input_into_xpath(
+            xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[2]/form/div[4]/div[2]/div/div/span/input',
+            text='线上')
+        self.click_full_xpath(xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[3]/div/div/div[2]/button')

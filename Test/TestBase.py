@@ -44,10 +44,11 @@ class TestBase(object):
         self.click_full_xpath(xpath=xpath)
         app = Desktop()
         dialog = app.window(title='Open')
-        dialog.wait('visible', timeout=10)
+        dialog.wait(wait_for='visible', timeout=10)
         dialog.set_focus()
         dialog.Edit.set_text(file)
         time.sleep(1)
+        dialog.wait(wait_for='ready', timeout=10)
         dialog.Open.click()
 
     def go_to_sidebar_item(self, index1, index2):
