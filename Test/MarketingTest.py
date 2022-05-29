@@ -40,3 +40,18 @@ class MarketingTest(TestBase):
             css='body > div:nth-child(10) > div > div > div > div > div.ant-picker-date-panel > div.ant-picker-body > '
                 'table > tbody > tr:nth-child(1) > td:nth-child(2)')
         self.click_full_xpath(xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/form/div[4]/button[2]')
+
+    def go_to_generate_pricing(self):
+        self.click_full_xpath(xpath='/html/body/div[1]/div/section/aside/div/div[1]/ul/li[3]/div/span')
+        self.click_full_xpath(xpath='/html/body/div[1]/div/section/aside/div/div[1]/ul/li[3]/ul/li[7]')
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
+
+    def generate_pricing(self):
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div[2]/div/form/div[14]/div['
+                  '1]/button')
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div[2]/div/form/div[14]/div['
+                  '2]/button')

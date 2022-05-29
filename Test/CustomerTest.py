@@ -10,19 +10,29 @@ class CustomerTest(TestBase):
         self.click_full_xpath(xpath='/html/body/div[1]/div/section/aside/div/div[1]/ul/li[3]/div')
         self.click_full_xpath(xpath='/html/body/div[1]/div/section/aside/div/div[1]/ul/li[3]/ul/li[1]/span')
 
-    def go_to_new_delegation(self):
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
-                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
-
     def go_to_function_list(self):
         self.scroll_to_top()
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[1]/div[2]/div[1]/div[1]/div/div[2]')
 
+    def go_to_pricing(self):
+        self.click_full_xpath(xpath='/html/body/div[1]/div/section/aside/div/div[1]/ul/li[3]/div')
+        self.click_full_xpath(xpath='/html/body/div[1]/div/section/aside/div/div[1]/ul/li[3]/ul/li[8]/span')
+
+    def accept_pricing(self):
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
+        self.input_into_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div[2]/div/form/div[9]/div['
+                  '2]/div/div/span/input',
+            text='kehu2')
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div[2]/div/form/div[14]/div['
+                  '1]/button')
+
     def new_delegation(self, delegation_name=random_string(10)):
         self.click_full_xpath(
-
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div[1]/div/div['
                   '2]/div[1]/div/div[1]/button')
         self.input_into_xpath(xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[2]/form/div/div/div/div/span/input',
@@ -30,6 +40,9 @@ class CustomerTest(TestBase):
         self.click_full_xpath('/html/body/div[5]/div/div[2]/div/div[2]/div[3]/div/div/div[2]/button')
 
     def fill_delegation(self):
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
                   '2]/div/div/div/div[2]/div/div/div[1]/form/div[1]/div[1]/div/div[2]/div/div/div/label[1]')
@@ -121,8 +134,10 @@ class CustomerTest(TestBase):
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
                   '2]/div/div/div/div[2]/div/div/div[2]/form/div[3]/div/div[2]/div/div/div[3]/div/div['
-                  '2]/div/div/div/div')
-        self.click_full_xpath(xpath='/html/body/div[7]/div/div/div/div[2]/div[1]/div/div/div[5]')
+                  '2]/div/div/div/div/span[1]/input')
+        self.click_full_css(
+            css='body > div:nth-child(10) > div > div > div > div.rc-virtual-list > div.rc-virtual-list-holder > div '
+                '> div > div:nth-child(2)')
         # 运行环境
         # 内存要求
         self.input_into_xpath(
