@@ -5,8 +5,6 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-js_top = "var q=document.documentElement.scrollTop=0"
-
 
 def random_string(length):
     return ''.join(random.choice(string.ascii_letters) for _ in range(length))
@@ -25,6 +23,11 @@ class TestBase(object):
     def wait(self):
         time.sleep(1)
         self.driver.implicitly_wait(10)
+
+    def scroll_to_top(self):
+        self.wait()
+        js_top = "var q=document.documentElement.scrollTop=0"
+        self.driver.execute_script(js_top)
 
     def click_full_xpath(self, xpath):
         self.wait()

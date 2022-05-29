@@ -1,14 +1,12 @@
-from Test.TestBase import TestBase, random_string, js_top
+from Test.TestBase import TestBase, random_string
 
 
 class CustomerTest(TestBase):
     def __init__(self, deployed=False, server=''):
-        # TODO: change server if deployed
         super().__init__(deployed, server)
         self.login(username='kehu2', password='1234')
 
     def go_to_delegation(self):
-        # TODO: fix xpath if menu is changed
         self.click_full_xpath(xpath='/html/body/div[1]/div/section/aside/div/div[1]/ul/li[3]/div')
         self.click_full_xpath(xpath='/html/body/div[1]/div/section/aside/div/div[1]/ul/li[3]/ul/li[1]/span')
 
@@ -18,7 +16,7 @@ class CustomerTest(TestBase):
                   '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
 
     def go_to_function_list(self):
-        self.driver.execute_script(js_top)
+        self.scroll_to_top()
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[1]/div[2]/div[1]/div[1]/div/div[2]')
 
