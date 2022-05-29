@@ -1,4 +1,4 @@
-from Test.TestingSupervisorTest import TestingSupervisorTest
+from Test.TestingTest import TestingTest
 
 
 def customer_new_delegation(customer):
@@ -18,6 +18,12 @@ if __name__ == '__main__':
     # ms = MarketingSupervisorTest()
     # ms.go_to_delegation()
     # ms.distribute_delegation()
-    ts = TestingSupervisorTest()
-    ts.go_to_delegation()
-    ts.distribute_delegation()
+    # ts = TestingSupervisorTest()
+    # ts.go_to_delegation()
+    # ts.distribute_delegation()
+    # m = MarketingTest()
+    # m.go_to_delegation()
+    # m.audit_delegation()
+    t = TestingTest()
+    t.go_to_delegation()
+    t.audit_delegation()

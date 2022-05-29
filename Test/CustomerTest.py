@@ -3,7 +3,7 @@ from Test.TestBase import TestBase, random_string
 
 class CustomerTest(TestBase):
     def __init__(self, deployed=False, server=''):
-        super().__init__(deployed, server)
+        super(CustomerTest, self).__init__(deployed, server)
         self.login(username='kehu2', password='1234')
 
     def go_to_delegation(self):

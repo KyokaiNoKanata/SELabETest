@@ -3,7 +3,7 @@ from Test.TestBase import TestBase
 
 class MarketingSupervisorTest(TestBase):
     def __init__(self):
-        super().__init__()
+        super(MarketingSupervisorTest, self).__init__()
         self.login(username='asdasdas1', password='1234')
 
     def go_to_delegation(self):

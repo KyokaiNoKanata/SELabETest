@@ -33,6 +33,10 @@ class TestBase(object):
         self.wait()
         self.driver.find_element(by=By.XPATH, value=xpath).click()
 
+    def click_full_css(self, css):
+        self.wait()
+        self.driver.find_element(by=By.CSS_SELECTOR, value=css).click()
+
     def input_into_xpath(self, xpath, text):
         self.wait()
         self.driver.find_element(by=By.XPATH, value=xpath).clear()
