@@ -6,9 +6,6 @@ class CustomerTest(TestBase):
         super(CustomerTest, self).__init__()
         self.login(username='kehu2', password='1234')
 
-    def go_to_delegation(self):
-        self.go_to_sidebar_item(index1=3, index2=1)
-
     def go_to_function_list(self):
         self.scroll_to_top()
         self.click_full_xpath(
@@ -28,6 +25,7 @@ class CustomerTest(TestBase):
                   '1]/button')
 
     def new_delegation(self, delegation_name=random_string(10)):
+        self.go_to_sidebar_item(index1=3, index2=1)
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div[1]/div/div['
                   '2]/div[1]/div/div[1]/button')
@@ -359,10 +357,10 @@ class CustomerTest(TestBase):
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
                   '2]/div/div/div/div/div/table/tbody/tr/td[6]/div/div/a/button')
         # 保密协议
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div['
-                  '1]/form/article/div[1]/div[1]/div/div/div[2]/div/div/span/input',
+        self.input_into_css(
+            css='#保密协议委托方名称',
             text='委托方')
+        self.scroll_to_bottom()
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div['
                   '1]/form/div/div[2]/button')
@@ -370,6 +368,7 @@ class CustomerTest(TestBase):
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[1]/div[2]/div[1]/div[1]/div/div[2]/div')
         # 合同第一页
+        self.scroll_to_bottom()
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div['
                   '1]/div/div/div/div[2]/div/div/div[3]/div/div/button')

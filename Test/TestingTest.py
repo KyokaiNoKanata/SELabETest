@@ -284,3 +284,13 @@ class TestingTest(TestBase):
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
                   '2]/div/form/div[2]/div[2]/button')
+
+    def archive_report(self):
+        self.go_to_sidebar_item(index1=7, index2=5)
+        self.click_css_selector(
+            css='#root > div > section > div.ant-layout > main > div > div.ant-pro-grid-content > div > div > '
+                'div.ant-pro-page-container-children-content > div > div:nth-child(2) > div > div.ant-table-wrapper > '
+                'div > div > div > div > div > table > tbody > tr > td:nth-child(6) > button')
+        self.click_css_selector(
+            css='body > div:nth-child(8) > div > div.ant-modal-wrap > div > div.ant-modal-content > div > div > '
+                'div.ant-modal-confirm-btns > button.ant-btn.ant-btn-primary')

@@ -122,3 +122,13 @@ class MarketingTest(TestBase):
             text='审核通过')
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div/main/form/div/div[7]/div/div[3]/div/div[2]/button')
+
+    def send_report(self):
+        self.go_to_sidebar_item(index1=7, index2=6)
+        self.click_css_selector(
+            css='#root > div > section > div.ant-layout > main > div > div.ant-pro-grid-content > div > div > '
+                'div.ant-pro-page-container-children-content > div > div:nth-child(2) > div > div.ant-table-wrapper > '
+                'div > div > div > div > div > table > tbody > tr > td:nth-child(6) > button')
+        self.click_css_selector(
+            css='body > div:nth-child(8) > div > div.ant-modal-wrap > div > div.ant-modal-content > div > div > '
+                'div.ant-modal-confirm-btns > button.ant-btn.ant-btn-primary')

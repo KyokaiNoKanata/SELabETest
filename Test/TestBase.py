@@ -26,6 +26,11 @@ class TestBase(object):
         js_top = "var q=document.documentElement.scrollTop=0"
         self.driver.execute_script(js_top)
 
+    def scroll_to_bottom(self):
+        self.wait()
+        js_bottom = "var q=document.documentElement.scrollTop=document.documentElement.scrollHeight"
+        self.driver.execute_script(js_bottom)
+
     def click_full_xpath(self, xpath):
         self.wait()
         self.driver.find_element(by=By.XPATH, value=xpath).click()
@@ -38,6 +43,11 @@ class TestBase(object):
         self.wait()
         self.driver.find_element(by=By.XPATH, value=xpath).clear()
         self.driver.find_element(by=By.XPATH, value=xpath).send_keys(text)
+
+    def input_into_css(self, css, text):
+        self.wait()
+        self.driver.find_element(by=By.CSS_SELECTOR, value=css).clear()
+        self.driver.find_element(by=By.CSS_SELECTOR, value=css).send_keys(text)
 
     def upload_into_xpath(self, xpath, file):
         self.wait()
@@ -63,5 +73,9 @@ class TestBase(object):
         self.click_full_xpath(xpath='/html/body/div[1]/div/div[2]/div/div[2]/form/button')
 
     def log_out(self):
-        # TODO: change server if deployed
         self.driver.get('http://localhost:8000/user/login')
+
+    def quit(self):
+        self.wait()
+        self.wait()
+        self.driver.quit()
