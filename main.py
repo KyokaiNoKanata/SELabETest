@@ -1,7 +1,7 @@
-from QualityTest import QualityTest
 from Test.CustomerTest import CustomerTest
 from Test.MarketingSupervisorTest import MarketingSupervisorTest
 from Test.MarketingTest import MarketingTest
+from Test.QualityTest import QualityTest
 from Test.TestingSupervisorTest import TestingSupervisorTest
 from Test.TestingTest import TestingTest
 
