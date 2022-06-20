@@ -338,11 +338,35 @@ class TestingTest(TestBase):
         self.click_full_xpath(xpath='/html/body/div[10]/div/div[2]/div/div[2]/div/div/div[2]/button[2]')
 
     def archive_report(self):
-        self.go_to_sidebar_item(index1=7, index2=5)
+        self.go_to_sidebar_item(index1=2, index2=4, index3=3)
         self.click_css_selector(
-            css='#root > div > section > div.ant-layout > main > div > div.ant-pro-grid-content > div > div > '
-                'div.ant-pro-page-container-children-content > div > div:nth-child(2) > div > div.ant-table-wrapper > '
-                'div > div > div > div > div > table > tbody > tr > td:nth-child(6) > button')
+            css='#root > div > section > div > main > div > div.ant-pro-grid-content > div > div > div > '
+                'div:nth-child(2) > div > div.ant-table-wrapper > div > div > div > div > div > table > tbody > '
+                'tr:nth-child(1) > td:nth-child(6) > a > button')
+        self.scroll_to_bottom()
         self.click_css_selector(
-            css='body > div:nth-child(8) > div > div.ant-modal-wrap > div > div.ant-modal-content > div > div > '
-                'div.ant-modal-confirm-btns > button.ant-btn.ant-btn-primary')
+            css='#root > div > section > div > main > div > div.ant-pro-grid-content > div > div > form > '
+                'div:nth-child(5) > div.ant-pro-card-body.ant-pro-card-body-direction-column > div:nth-child(5) > div '
+                '> div.ant-pro-card-body > div:nth-child(1) > div.ant-col.ant-form-item-control > div > div > div')
+        self.click_full_xpath(xpath='/html/body/div[5]/div/div/div/div[2]/div[1]/div/div/div')
+        self.click_css_selector(
+            css='#root > div > section > div > main > div > div.ant-pro-grid-content > div > div > form > '
+                'div:nth-child(5) > div.ant-pro-card-body.ant-pro-card-body-direction-column > div:nth-child(5) > div '
+                '> div.ant-pro-card-body > div:nth-child(2) > div.ant-col.ant-form-item-control > div > div > div')
+        self.click_css_selector(
+            css='body > div:nth-child(9) > div > div > div > div.rc-virtual-list > div.rc-virtual-list-holder > div > '
+                'div > div')
+        self.click_css_selector(
+            css='#root > div > section > div > main > div > div.ant-pro-grid-content > div > div > form > '
+                'div:nth-child(5) > div.ant-pro-card-body.ant-pro-card-body-direction-column > div:nth-child(5) > div '
+                '> div.ant-pro-card-body > div:nth-child(3) > div.ant-col.ant-form-item-control > div > div > div')
+        self.click_css_selector(
+            css='body > div:nth-child(10) > div > div > div > div.rc-virtual-list > div.rc-virtual-list-holder > div '
+                '> div > div')
+        self.click_css_selector(
+            css='#root > div > section > div > main > div > div.ant-pro-grid-content > div > div > form > '
+                'div.ant-space.ant-space-horizontal.ant-space-align-center > div:nth-child(2) > button')
+        self.click_css_selector(
+            css='#root > div > section > div > main > div > div.ant-pro-grid-content > div > div > form > '
+                'div.ant-space.ant-space-horizontal.ant-space-align-center > div:nth-child(3) > button')
+        self.click_full_xpath(xpath='/html/body/div[8]/div/div[2]/div/div[2]/div/div/div[2]/button[2]')

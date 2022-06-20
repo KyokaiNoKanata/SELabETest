@@ -137,11 +137,12 @@ class MarketingTest(TestBase):
         self.click_full_xpath(xpath='/html/body/div[5]/div/div[2]/div/div[2]/div/div/div[2]/button[2]')
 
     def send_report(self):
-        self.go_to_sidebar_item(index1=7, index2=6)
+        self.go_to_sidebar_item(index1=2, index2=4, index3=2)
         self.click_css_selector(
-            css='#root > div > section > div.ant-layout > main > div > div.ant-pro-grid-content > div > div > '
-                'div.ant-pro-page-container-children-content > div > div:nth-child(2) > div > div.ant-table-wrapper > '
-                'div > div > div > div > div > table > tbody > tr > td:nth-child(6) > button')
+            css='#root > div > section > div > main > div > div.ant-pro-grid-content > div > div > div > '
+                'div:nth-child(2) > div > div.ant-table-wrapper > div > div > div > div > div > table > tbody > tr > '
+                'td:nth-child(6) > button')
         self.click_css_selector(
             css='body > div:nth-child(8) > div > div.ant-modal-wrap > div > div.ant-modal-content > div > div > '
                 'div.ant-modal-confirm-btns > button.ant-btn.ant-btn-primary')
+        self.wait()

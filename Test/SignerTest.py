@@ -7,16 +7,17 @@ class SignerTest(TestBase):
         self.login(username='33ee', password='1234')
 
     def sign(self):
-        self.go_to_sidebar_item(index1=7, index2=4)
-        self.click_css_selector(
-            css='#root > div > section > div > main > div > div.ant-pro-grid-content > div > div > '
-                'div.ant-pro-page-container-children-content > div > div:nth-child(2) > div > div.ant-table-wrapper > '
-                'div > div > div > div > div > table > tbody > tr:nth-child(1) > td:nth-child(6) > div > div > a > '
-                'button')
+        self.go_to_sidebar_item(index1=1, index2=4, index3=2)
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/a/button')
         self.scroll_to_top()
+        self.click_full_xpath(xpath='/html/body/div[1]/div/section/div/main/div/div[1]/div[2]/div[1]/div[1]/div/div[5]')
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/form/div[2]/div/div/div/div['
+                  '2]/div/div/div/div/span[1]/input')
         self.click_css_selector(
-            css='#root > div > section > div > main > div > div.ant-card-head > '
-                'div.ant-tabs.ant-tabs-top.ant-tabs-large.ant-card-head-tabs > div.ant-tabs-nav > '
-                'div.ant-tabs-nav-wrap > div > div:nth-child(6)')
-        self.click_css_selector(
-            css='#root > div > section > div > main > div > div.ant-card-body > div > div > a > button')
+            css='body > div:nth-child(8) > div > div > div > div.rc-virtual-list > div.rc-virtual-list-holder > div > '
+                'div > div.ant-select-item.ant-select-item-option.ant-pro-filed-search-select-option.ant-select-item'
+                '-option-active')
+        self.click_full_xpath(xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/form/div[3]/button[2]')
