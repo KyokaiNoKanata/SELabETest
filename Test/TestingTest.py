@@ -40,30 +40,25 @@ class TestingTest(TestBase):
                 'div.ant-space.ant-space-horizontal.ant-space-align-center > div > div > button')
         # 软件说明部分评审
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div[2]/div/div/div[5]/div/div/button[2]')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[2]/div/div/div['
+                  '2]/div/div/div[5]/div/div/button[2]')
         # 软件文档集评审
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div[2]/div/div/div[3]/form/div/div/div[3]/div/div/div/div/div[2]/div[1]/div/span/input',
-            text='张三')
+        self.input_into_css(css='#step3_检查人', text='检查人')
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div[2]/div/div/div[5]/div/div/button[2]')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[2]/div/div/div['
+                  '2]/div/div/div[5]/div/div/button[2]')
         # 审核意见
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div[2]/div/div/div[4]/form/div/div/div[2]/div/div[2]/div/div/div/div/span[1]/input')
+        self.click_css_selector(css='#step4_是否通过')
         self.click_css_selector(
             css='body > div:nth-child(9) > div > div > div > div.rc-virtual-list > div.rc-virtual-list-holder > div > '
                 'div > div.ant-select-item.ant-select-item-option.ant-pro-filed-search-select-option.ant-select-item'
                 '-option-active')
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div[2]/div/div/div[5]/div/div/div/div/div[2]/button')
+            xpath='//*[@id="root"]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[2]/div/div/div['
+                  '2]/div/div/div[5]/div/div/div/div/div[2]/button')
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div[2]/div/div/div[5]/div/div/div/div/div[3]/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[2]/div/div/div['
+                  '2]/div/div/div[5]/div/div/div/div/div[3]/button')
 
     def audit_sample(self):
         self.go_to_sidebar_item(index1=5, index2=3)
