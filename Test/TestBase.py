@@ -18,8 +18,8 @@ class TestBase(object):
         self.wait()
 
     def wait(self):
-        time.sleep(1)
-        self.driver.implicitly_wait(20)
+        time.sleep(0.25)
+        self.driver.implicitly_wait(10)
 
     def scroll_to_top(self):
         self.wait()

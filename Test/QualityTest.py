@@ -7,7 +7,7 @@ class QualityTest(TestBase):
         self.login(username='zhiliangbu2', password='1234')
 
     def audit_solution(self):
-        self.go_to_sidebar_item(index1=6, index2=3)
+        self.go_to_sidebar_item(index1=6, index2=2)
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
                   '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')

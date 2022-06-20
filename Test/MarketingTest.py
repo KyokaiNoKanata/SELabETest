@@ -11,7 +11,7 @@ class MarketingTest(TestBase):
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
                   '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
-        self.click_full_xpath(xpath='/html/body/div[1]/div/section/div/main/div/div[1]/div[2]/div[1]/div[1]/div/div[3]')
+        self.click_full_xpath(xpath='/html/body/div[1]/div/section/div/main/div/div[1]/div[2]/div[1]/div[1]/div/div[4]')
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/form/div[1]/div/div[2]/div/div['
                   '2]/div/div/div/div')
@@ -69,6 +69,23 @@ class MarketingTest(TestBase):
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[1]/div[2]/div[1]/div[1]/div/div[2]')
         # 合同
         # 合同第一页
+        # 合同签订地点
+        self.input_into_css(css='#step1_签订地点', text='南京')
+        # 签订日期
+        self.click_css_selector(css='#step1 > div:nth-child(6) > div.ant-col.ant-form-item-control > div > div > div')
+        self.click_css_selector(
+            css='body > div:nth-child(8) > div > div > div > div > div.ant-picker-date-panel > div.ant-picker-body > '
+                'table > tbody > tr:nth-child(1) > td.ant-picker-cell.ant-picker-cell-start.ant-picker-cell-in-view')
+        # 质量特性
+        self.input_into_css(css='#step1_质量特性', text='质量特性')
+        # 合同价款
+        self.input_into_css(css='#step1_合同价款', text='1000000')
+        # 完成天数
+        self.input_into_css(css='#step1_完成天数', text='30')
+        # 整改次数
+        self.input_into_css(css='#step1_整改次数', text='1')
+        # 超过天数
+        self.input_into_css(css='#step1_超过天数', text='30')
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div['
                   '1]/div/div/div/div[2]/div/div/div[3]/div/div/button')
@@ -103,10 +120,11 @@ class MarketingTest(TestBase):
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/form/div[3]/button[2]')
 
     def upload_contract(self):
-        self.go_to_sidebar_item(index1=4, index2=1)
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
-                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[7]/div/div/button')
+        self.go_to_sidebar_item(index1=4, index2=6)
+        self.click_css_selector(
+            css='#root > div > section > div > main > div > div.ant-pro-grid-content > div > div > '
+                'div.ant-pro-page-container-children-content > div > div:nth-child(2) > div > div.ant-table-wrapper > '
+                'div > div > div > div > div > table > tbody > tr:nth-child(1) > td:nth-child(6) > div > div > button')
         self.upload_into_xpath(
             xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[2]/form/div/div/div/span/div[1]',
             file='C:\\Users\\Yui\\OneDrive\\图片\\Kaguya.jpg')
@@ -117,11 +135,10 @@ class MarketingTest(TestBase):
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
                   '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/form/div/div[7]/div/div[2]/div[2]/div/div/textarea',
-            text='审核通过')
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/form/div/div[7]/div/div[3]/div/div[2]/button')
+        self.input_into_css(css='#remark', text='通过')
+        self.click_css_selector(
+            css='#root > div > section > div > main > form > div > div:nth-child(6) > div > div:nth-child(4) > div > '
+                'div:nth-child(2) > button')
 
     def send_report(self):
         self.go_to_sidebar_item(index1=7, index2=6)
