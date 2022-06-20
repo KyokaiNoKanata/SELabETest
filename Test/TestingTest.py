@@ -190,28 +190,37 @@ class TestingTest(TestBase):
                 '> div > div > div:nth-child(4) > button')
 
     def fill_document(self):
-        self.go_to_sidebar_item(index1=7, index2=1)
+        self.go_to_sidebar_item(index1=2, index2=4, index3=2)
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
-                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/a/button')
         # 测试用例
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/form/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div['
+                  '2]/div/form/div/div/div/div/div/div/div/button')
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div['
+                  '2]/div/form/div/div/div/div/div/div/div/div/div/div/div/div/div/table/tbody/tr/td[8]/div/div[1]')
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[2]/div/form/button')
         self.scroll_to_top()
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[1]/div[2]/div[1]/div[1]/div/div[2]')
         # 测试记录
+        self.click_css_selector(
+            css='#root > div > section > div > main > div > div.ant-card-body > div > div > div > '
+                'div.ant-pro-grid-content > div > div > div.ant-pro-card > div > form > div > div > div > div > div > '
+                'div > div > button')
+        self.click_css_selector(
+            css='#测试用例 > div > div > table > tbody > tr > td:nth-child(14) > div > div:nth-child(1)')
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/form/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[2]/div/form/button')
         self.scroll_to_top()
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[1]/div[2]/div[1]/div[1]/div/div[3]')
         # 问题清单
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/form/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[2]/div/form/button')
         self.scroll_to_top()
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[1]/div[2]/div[1]/div[1]/div/div[4]')
@@ -219,20 +228,114 @@ class TestingTest(TestBase):
         # 测试类别
         self.input_into_css(css='#step1_测试类别_1', text='测试类别')
         self.scroll_to_bottom()
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div['
+                  '2]/div/div/div/div[2]/div/div/div[7]/div/button')
+        self.input_into_css(css='#step2_样品名称', text='样品名称')
+        self.input_into_css(css='#step2_版本\\/型号', text='版本')
+        self.click_css_selector(css='#step2_来样日期')
+        self.click_css_selector(css='body > div:nth-child(8) > div > div > div > div > div.ant-picker-date-panel > '
+                                    'div.ant-picker-body > table > tbody > tr:nth-child(4) > '
+                                    'td.ant-picker-cell.ant-picker-cell-in-view.ant-picker-cell-today')
+        self.input_into_css(css='#step2_测试类型', text='测试类型')
+        self.click_css_selector(css='#step2_测试时间')
         self.click_css_selector(
-            css='#root > div > section > div > main > div > div.ant-card-body > div > div > div > '
-                'div.ant-pro-grid-content > div > div > div.ant-pro-page-container-children-content > '
-                'div.ant-pro-card > div > div > div > div:nth-child(2) > div > div > '
-                'div.ant-space.ant-space-horizontal.ant-space-align-center > div > button')
-        self.scroll_to_top()
+            css='body > div:nth-child(9) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(1) '
+                '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > '
+                'td.ant-picker-cell.ant-picker-cell-in-view.ant-picker-cell-today')
+        self.click_css_selector(
+            css='body > div:nth-child(9) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(2) '
+                '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > td:nth-child(4)')
+        self.input_into_css(css='#step2_样品状态', text='状态')
+        self.input_into_css(css='#step2_样品清单', text='样品清单')
+        self.input_into_css(css='#step2_测试结论', text='结论')
+        self.input_into_css(css='#step2_主测人', text='主测人')
+        self.click_css_selector(css='#step2_主测_日期')
+        self.click_css_selector(
+            css='body > div:nth-child(10) > div > div > div > div > div.ant-picker-date-panel > div.ant-picker-body > '
+                'table > tbody > tr:nth-child(4) > td.ant-picker-cell.ant-picker-cell-in-view.ant-picker-cell-today')
+        self.input_into_css(css='#step2_审核人', text='审核人')
+        self.click_css_selector(css='#step2_审核_日期')
+        self.click_css_selector(
+            css='body > div:nth-child(11) > div > div > div > div > div.ant-picker-date-panel > div.ant-picker-body > '
+                'table > tbody > tr:nth-child(4) > td.ant-picker-cell.ant-picker-cell-in-view.ant-picker-cell-today')
+        self.input_into_css(css='#step2_批准人', text='批准人')
+        self.click_css_selector(css='#step2_批准_日期')
+        self.click_css_selector(
+            css='body > div:nth-child(12) > div > div > div > div > div.ant-picker-date-panel > div.ant-picker-body > '
+                'table > tbody > tr:nth-child(4) > td.ant-picker-cell.ant-picker-cell-in-view.ant-picker-cell-today')
+        self.input_into_css(css='#step2_电话', text='电话')
+        self.input_into_css(css='#step2_传真', text='传真')
+        self.input_into_css(css='#step2_地址', text='地址')
+        self.input_into_css(css='#step2_邮编', text='邮编')
+        self.input_into_css(css='#step2_联系人', text='联系人')
+        self.input_into_css(css='#step2_E-mail', text='123@abc.com')
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[1]/div[2]/div[1]/div[1]/div/div[3]')
-        # 项目编号
-        self.input_into_css(css='#step2_项目编号', text='项目编号')
-        # 提交
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div['
+                  '2]/div/div/div/div[2]/div/div/div[7]/div[2]/button')
+        self.input_into_css(css='#step3_硬件类别', text='硬件类别')
+        self.input_into_css(css='#step3_硬件名称', text='硬件名称')
+        self.input_into_css(css='#step3_配置', text='配置')
+        self.input_into_css(css='#step3_数量', text='数量')
+        # 软件环境
+        self.input_into_css(
+            css='#step3_软件环境 > div > div > table > tbody > tr:nth-child(1) > td:nth-child(2) > div > div > div > div '
+                '> span > input',
+            text='系统')
+        self.input_into_css(
+            css='#step3_软件环境 > div > div > table > tbody > tr:nth-child(1) > td:nth-child(3) > div > div > div > div '
+                '> span > input',
+            text='版本')
+        self.input_into_css(
+            css='#step3_软件环境 > div > div > table > tbody > tr:nth-child(2) > td:nth-child(2) > div > div > div > div '
+                '> span > input',
+            text='软件')
+        self.input_into_css(
+            css='#step3_软件环境 > div > div > table > tbody > tr:nth-child(2) > td:nth-child(3) > div > div > div > div '
+                '> span > input',
+            text='软件')
+        self.input_into_css(
+            css='#step3_软件环境 > div > div > table > tbody > tr:nth-child(3) > td:nth-child(2) > div > div > div > div '
+                '> span > input',
+            text='软件')
+        self.input_into_css(
+            css='#step3_软件环境 > div > div > table > tbody > tr:nth-child(3) > td:nth-child(3) > div > div > div > div '
+                '> span > input',
+            text='软件')
+        self.input_into_css(
+            css='#step3_软件环境 > div > div > table > tbody > tr:nth-child(4) > td:nth-child(2) > div > div > div > div '
+                '> span > input',
+            text='软件')
+        self.input_into_css(
+            css='#step3_软件环境 > div > div > table > tbody > tr:nth-child(4) > td:nth-child(3) > div > div > div > div '
+                '> span > input',
+            text='软件')
+        self.input_into_css(
+            css='#step3_软件环境 > div > div > table > tbody > tr:nth-child(5) > td:nth-child(2) > div > div > div > div '
+                '> span > input',
+            text='软件')
+        self.input_into_css(
+            css='#step3_软件环境 > div > div > table > tbody > tr:nth-child(5) > td:nth-child(3) > div > div > div > div '
+                '> span > input',
+            text='软件')
+        self.input_into_css(css='#step3_网络环境', text='网络环境')
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/form/div[2]/div[2]/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div['
+                  '2]/div/div/div/div[2]/div/div/div[7]/div[2]/button')
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div['
+                  '2]/div/div/div/div[2]/div/div/div[7]/div[2]/button')
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div['
+                  '2]/div/div/div/div[2]/div/div/div[7]/div[2]/button')
+        self.input_into_css(css='#step6_测试执行记录', text='记录')
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div['
+                  '2]/div/div/div/div[2]/div/div/div[7]/div[2]/button')
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div['
+                  '2]/div/div/div/div[2]/div/div/div[7]/div[3]/button')
+        self.click_full_xpath(xpath='/html/body/div[10]/div/div[2]/div/div[2]/div/div/div[2]/button[2]')
 
     def archive_report(self):
         self.go_to_sidebar_item(index1=7, index2=5)

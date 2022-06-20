@@ -1,6 +1,5 @@
 from Test.CustomerTest import CustomerTest
 from Test.MarketingTest import MarketingTest
-from Test.QualityTest import QualityTest
 from Test.SignerTest import SignerTest
 from Test.TestingSupervisorTest import TestingSupervisorTest
 from Test.TestingTest import TestingTest
@@ -57,12 +56,12 @@ if __name__ == '__main__':
     # t = TestingTest()
     # t.fill_solution()
     # t.quit()
-    q = QualityTest()
-    q.audit_solution()
-    q.quit()
-    t = TestingTest()
-    t.fill_document()
-    t.quit()
+    # q = QualityTest()
+    # q.audit_solution()
+    # q.quit()
+    # t = TestingTest()
+    # t.fill_document()
+    # t.quit()
     ts = TestingSupervisorTest()
     ts.audit_report()
     ts.quit()
