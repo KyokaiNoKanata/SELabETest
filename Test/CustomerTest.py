@@ -25,93 +25,51 @@ class CustomerTest(TestBase):
                   '1]/button')
 
     def new_delegation(self, delegation_name=random_string(10)):
-        self.go_to_sidebar_item(index1=3, index2=1)
+        self.go_to_sidebar_item(index1=1, index2=1)
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div[1]/div/div['
-                  '2]/div[1]/div/div[1]/button')
+            xpath='//*[@id="root"]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div[1]/div/div[2]/div['
+                  '1]/div/div[1]/button')
         self.input_into_xpath(xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[2]/form/div/div/div/div/span/input',
                               text=delegation_name)
         self.click_full_xpath('/html/body/div[5]/div/div[2]/div/div[2]/div[3]/div/div/div[2]/button')
 
     def fill_delegation(self):
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
-                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[1]/form/div[1]/div[1]/div/div[2]/div/div/div/label[1]')
+        self.click_css_selector(
+            css='#root > div > section > div.ant-layout > main > div > div.ant-pro-grid-content > div > div > div > '
+                'div:nth-child(2) > div > div.ant-table-wrapper > div > div > div > div > div > table > tbody > '
+                'tr:nth-child(1) > td:nth-child(6) > a > button')
         self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div['
                   '2]/div/div/div/div[2]/div/div/div[1]/form/div[1]/div[2]/div/div/div/div[2]/div/div/span/input',
             text='其他')
         self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div['
                   '2]/div/div/div/div[2]/div/div/div[1]/form/div[2]/div[2]/div/div/span/input',
             text='测试软件')
         self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div['
                   '2]/div/div/div/div[2]/div/div/div[1]/form/div[3]/div[2]/div/div/span/input',
             text='1.0.0')
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[1]/form/div[4]/div[2]/div/div/span/input',
-            text='公司1')
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[1]/form/div[5]/div[2]/div/div/span/input',
-            text='Company1')
-        # 单位性质
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[1]/form/div[6]/div[2]/div/div/span/input',
-            text='公司2')
+        # 委托单位
+        self.input_into_css(css='#step1_委托单位Ch', text='公司1')
+        # 委托单位（英文）
+        self.input_into_css(css='#step1_委托单位En', text='Company')
+        # 开发单位
+        self.input_into_css(css='#step1_开发单位', text='公司2')
         # 软件用户对象描述
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[1]/form/div[8]/div[2]/div/div/textarea',
-            text='Objective User')
+        self.input_into_css(css='#step1_软件用户对象描述', text='测试软件')
         # 主要功能及用途简介
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[1]/form/div[9]/div[2]/div/div/div/textarea',
-            text='主要用途和功能简介')
+        self.input_into_css(css='#step1_主要功能及用途简介（限200字）', text='测试软件')
         # 下一步
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div['
                   '2]/div/div/div/div[2]/div/div/div[4]/div/button')
-        # 测试依据
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[2]/form/div[1]/div[1]/div/div/div[1]/div[2]/div/div/div/label['
-                  '1]/span[1]/input')
-        # 测试依据-其他
-        self.input_into_xpath(xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div['
-                                    '2]/div/div/div[1]/div[2]/div/div/div/div[2]/div/div/div[2]/form/div[1]/div['
-                                    '1]/div/div/div[2]/div/div/div[2]/div/div/span/input',
-                              text='其他依据')
-        # 需要测试的技术指标
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[2]/form/div[1]/div[2]/div/div/div[1]/div[2]/div/div/div/label['
-                  '3]/span[1]')
         # 功能数
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[2]/form/div[2]/div/div[2]/div/div/div[1]/div/div['
-                  '2]/div/div/span/input',
-            text='3000')
+        self.input_into_css(css='#step2_功能数', text='1')
         # 功能点数
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[2]/form/div[2]/div/div[2]/div/div/div[2]/div/div['
-                  '2]/div/div/span/input',
-            text='6000')
+        self.input_into_css(css='#step2_功能点数', text='1')
         # 代码行数
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[2]/form/div[2]/div/div[2]/div/div/div[3]/div/div['
-                  '2]/div/div/span/input',
-            text='20000')
+        self.input_into_css(css='#step2_代码行数', text='1')
         # 软件类型
         self.click_css_selector(css='#step2_软件类型')
         self.click_css_selector(
@@ -120,196 +78,89 @@ class CustomerTest(TestBase):
                 'span.ant-select-tree-node-content-wrapper.ant-select-tree-node-content-wrapper-normal')
         # 运行环境
         # 内存要求
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[2]/form/div[4]/div/div[2]/div[1]/div/div[2]/div['
-                  '4]/div/div/div/div[2]/div/div[1]/div/div/span/input',
-            text='4096')
+        self.input_into_css(css='#step2_客户端内存要求', text='1')
         # 服务器端
         # 架构
-        self.click_full_xpath(xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div['
-                                    '1]/div[2]/div/div/div/div[2]/div/div/div[2]/form/div[4]/div/div[2]/div[2]/div/div['
-                                    '2]/div/div[1]/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/label[1]/span[1]')
+        self.click_css_selector(css='#step2_架构 > label:nth-child(1) > span.ant-checkbox > input')
         # 内存要求
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[2]/form/div[4]/div/div[2]/div[2]/div/div[2]/div/div[1]/div/div['
-                  '2]/div/div/div[3]/div/div[2]/div/div[1]/div/div/span/input',
-            text='4096')
+        self.input_into_css(css='#step2_服务器端内存要求', text='4096')
         # 硬盘要求
-        self.input_into_xpath(xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div['
-                                    '2]/div/div/div[1]/div[2]/div/div/div/div[2]/div/div/div[2]/form/div[4]/div/div['
-                                    '2]/div[2]/div/div[2]/div/div[1]/div/div[2]/div/div/div[4]/div/div[2]/div/div['
-                                    '1]/div/div/span/input',
-                              text='4096')
+        self.input_into_css(css='#step2_服务器端硬盘要求', text='4096')
         # 软件
         # 操作系统
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[2]/form/div[4]/div/div[2]/div[2]/div/div[2]/div/div[2]/div/div['
-                  '2]/div[1]/div/div[1]/div/div[2]/div/div/span/input',
-            text='Windows 11')
+        self.input_into_css(css='#step2_操作系统', text='Windows 11')
         # 版本
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[2]/form/div[4]/div/div[2]/div[2]/div/div[2]/div/div[2]/div/div['
-                  '2]/div[1]/div/div[2]/div/div[2]/div/div/span/input',
-            text='22H2')
+        self.input_into_css(css='#step2_版本', text='22H2')
         # 编程语言
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[2]/form/div[4]/div/div[2]/div[2]/div/div[2]/div/div[2]/div/div['
-                  '2]/div[1]/div/div[3]/div/div[2]/div[1]/div/span/input',
-            text='C++')
+        self.input_into_css(css='#step2_编程语言', text='C++')
         # 数据库
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[2]/form/div[4]/div/div[2]/div[2]/div/div[2]/div/div[2]/div/div['
-                  '2]/div[1]/div/div[4]/div/div[2]/div/div/span/input',
-            text='DB')
+        self.input_into_css(css='#step2_数据库', text='MySQL')
         # 中间件
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[2]/form/div[4]/div/div[2]/div[2]/div/div[2]/div/div[2]/div/div['
-                  '2]/div[1]/div/div[5]/div/div[2]/div/div/span/input',
-            text='Middleware')
+        self.input_into_css(css='#step2_中间件', text='中间件')
         # 其他支撑软件
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[2]/form/div[4]/div/div[2]/div[2]/div/div[2]/div/div[2]/div/div['
-                  '2]/div[1]/div/div[6]/div/div[2]/div/div/span/input',
-            text='Others')
+        self.input_into_css(css='#step2_其他支撑软件', text='支撑软件')
         # 构架
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[2]/form/div[4]/div/div[2]/div[2]/div/div[2]/div/div[2]/div/div['
-                  '2]/div[2]/div[2]/div/div/div/label[1]/span[1]')
+        self.click_css_selector(css='#step2_构架 > label:nth-child(1) > span.ant-checkbox')
         # 网络环境
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[2]/form/div[4]/div/div[2]/div[3]/div/div[2]/div/div/div['
-                  '1]/div/span/input',
-            text='net')
-        # 文档材料
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[2]/form/div[5]/div[2]/div[2]/div/div[2]/div[1]/div/div['
-                  '1]/div/textarea',
-            text='文档材料')
+        self.input_into_css(css='#step2_网络环境', text='网络环境')
+        # 文档资料
+        self.input_into_css(css='#step2_文档资料', text='文档资料')
         # 样品保存期满
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[2]/form/div[5]/div[2]/div[3]/div/div[2]/div/div/div['
-                  '1]/div/div/div')
+        self.click_css_selector(css='#step2_提交的样品')
         self.click_css_selector(
             css='body > div:nth-child(9) > div > div > div > div.rc-virtual-list > div.rc-virtual-list-holder > div > '
                 'div > div.ant-select-item.ant-select-item-option.ant-pro-filed-search-select-option.ant-select-item'
                 '-option-active')
         # 下一步
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div['
                   '2]/div/div/div/div[2]/div/div/div[4]/div[2]/button')
         # 委托单位信息
         # 电话
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[3]/form/div[1]/div/div/div[2]/div[1]/div[2]/div/div/span/input',
-            text='123456789')
+        self.input_into_css(css='#step3_委托单位_电话', text='123456789')
         # 传真
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[3]/form/div[1]/div/div/div[2]/div[2]/div[2]/div/div/span/input',
-            text='123456789')
+        self.input_into_css(css='#step3_委托单位_传真', text='123456789')
         # 地址
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[3]/form/div[1]/div/div/div[2]/div[3]/div[2]/div/div/span/input',
-            text='地址')
+        self.input_into_css(css='#step3_委托单位_地址', text='南京大学')
         # 邮编
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[3]/form/div[1]/div/div/div[2]/div[4]/div[2]/div/div/span/input',
-            text='123456')
+        self.input_into_css(css='#step3_委托单位_邮编', text='123456789')
         # 联系人
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[3]/form/div[1]/div/div/div[2]/div[5]/div[2]/div/div/span/input',
-            text='联系人')
+        self.input_into_css(css='#step3_委托单位_联系人', text='123456789')
         # 手机
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[3]/form/div[1]/div/div/div[2]/div[6]/div[2]/div/div/span/input',
-            text='123456789')
+        self.input_into_css(css='#step3_委托单位_手机', text='123456789')
         # E-mail
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[3]/form/div[1]/div/div/div[2]/div[7]/div[2]/div/div/span/input',
-            text='123@abc.com')
+        self.input_into_css(css='#step3_委托单位_Email', text='123@abc.com')
         # 网址
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[3]/form/div[1]/div/div/div[2]/div[8]/div[2]/div['
-                  '1]/div/span/input',
-            text='www.baidu.com')
+        self.input_into_css(css='#step3_委托单位_网址', text='www.nju.edu.cn')
         # 密级
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[3]/form/div[2]/div/div[1]/div[2]/div/div/div/div')
+        self.click_css_selector(css='#step3_密级')
         self.click_css_selector(
             css='body > div:nth-child(10) > div > div > div > div.rc-virtual-list > div.rc-virtual-list-holder > div '
                 '> div > div:nth-child(1)')
         # 查杀病毒
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[3]/form/div[2]/div/div[2]/div[2]/div/div/div/div')
+        self.click_css_selector(css='#step3_查杀病毒')
         self.click_css_selector(
             css='body > div:nth-child(11) > div > div > div > div.rc-virtual-list > div.rc-virtual-list-holder > div '
                 '> div > div.ant-select-item.ant-select-item-option.ant-pro-filed-search-select-option.ant-select'
                 '-item-option-active')
         # 所用查杀工具
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[3]/form/div[2]/div/div[3]/div/div/div[2]/div/div/span/input',
-            text='360')
+        self.input_into_css(css='#step3_所用查杀工具', text='360')
         # 材料检查
         # 测试样品
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[3]/form/div[3]/div[2]/div/div/div[1]/div/div['
-                  '2]/div/div/div/label[2]/span[1]/input')
+        self.click_css_selector(css='#step3_测试样品 > label:nth-child(1) > span.ant-checkbox')
         # 需求文档
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[3]/form/div[3]/div[2]/div/div/div[2]/div/div['
-                  '2]/div/div/div/label[1]/span[1]/input')
+        self.click_css_selector(css='#step3_需求文档 > label:nth-child(1) > span.ant-checkbox')
         # 用户文档
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[3]/form/div[3]/div[2]/div/div/div[3]/div/div['
-                  '2]/div/div/div/label[1]/span[1]/input')
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[3]/form/div[3]/div[2]/div/div/div[4]/div/div['
-                  '2]/div/div/div/label[1]/span[1]')
-        # 测试项目编号
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[3]/form/div[4]/div/div/div[2]/div/div/span/input',
-            text=random_string(10))
-        # 备注
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[3]/form/div[5]/div/div/div[2]/div[1]/div/textarea',
-            text='多放辣椒')
+        self.click_css_selector(css='#step3_用户文档 > label:nth-child(1) > span.ant-checkbox')
+        # 操作文档
+        self.click_css_selector(css='#step3_操作文档 > label:nth-child(1) > span.ant-checkbox')
         # 委托人（签字）
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[3]/form/div[6]/div/div/div/div[1]/div/div[2]/div/div/span/input',
-            text='张三')
+        self.input_into_css(css='#step3_委托人（签字）', text='委托人')
         # 保存
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div/div[2]/div/div/div[4]/div[2]/button')
+        self.click_css_selector(
+            css='#root > div > section > div > main > div > div.ant-card-body > div > div > div > '
+                'div.ant-pro-grid-content > div > div > div.ant-pro-card > div > div > div > div:nth-child(2) > div > '
+                'div > div.ant-space.ant-space-horizontal.ant-space-align-center > div:nth-child(2) > button')
 
     def fill_function_list(self):
         # 保存
