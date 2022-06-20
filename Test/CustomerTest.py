@@ -164,12 +164,14 @@ class CustomerTest(TestBase):
 
     def fill_function_list(self):
         # 保存
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/form/div['
-                  '4]/div[2]/button')
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/form/div['
-                  '4]/div[3]/button')
+        self.click_css_selector(
+            css='#root > div > section > div > main > div > div.ant-card-body > div > div > div > '
+                'div.ant-pro-grid-content > div > div > form > '
+                'div.ant-space.ant-space-horizontal.ant-space-align-center > div:nth-child(2) > button')
+        self.click_css_selector(
+            css='#root > div > section > div > main > div > div.ant-card-body > div > div > div > '
+                'div.ant-pro-grid-content > div > div > form > '
+                'div.ant-space.ant-space-horizontal.ant-space-align-center > div:nth-child(3) > button')
 
     def check_contract(self):
         self.go_to_sidebar_item(index1=4, index2=4)

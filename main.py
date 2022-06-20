@@ -1,5 +1,4 @@
 from Test.CustomerTest import CustomerTest
-from Test.MarketingSupervisorTest import MarketingSupervisorTest
 from Test.MarketingTest import MarketingTest
 from Test.QualityTest import QualityTest
 from Test.SignerTest import SignerTest
@@ -7,21 +6,21 @@ from Test.TestingSupervisorTest import TestingSupervisorTest
 from Test.TestingTest import TestingTest
 
 if __name__ == '__main__':
-    c = CustomerTest()
-    c.new_delegation()
-    c.fill_delegation()
-    c.go_to_function_list()
-    c.fill_function_list()
-    c.quit()
-    ms = MarketingSupervisorTest()
-    ms.distribute_delegation()
-    ms.quit()
-    ts = TestingSupervisorTest()
-    ts.distribute_delegation()
-    ts.quit()
-    m = MarketingTest()
-    m.audit_delegation()
-    m.quit()
+    # c = CustomerTest()
+    # c.new_delegation()
+    # c.fill_delegation()
+    # c.go_to_function_list()
+    # c.fill_function_list()
+    # c.quit()
+    # ms = MarketingSupervisorTest()
+    # ms.distribute_delegation()
+    # ms.quit()
+    # ts = TestingSupervisorTest()
+    # ts.distribute_delegation()
+    # ts.quit()
+    # m = MarketingTest()
+    # m.audit_delegation()
+    # m.quit()
     t = TestingTest()
     t.audit_delegation()
     t.quit()

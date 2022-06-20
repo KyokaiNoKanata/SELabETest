@@ -7,36 +7,37 @@ class TestingTest(TestBase):
         self.login(username='ceshibu2', password='1234')
 
     def audit_delegation(self):
-        self.go_to_sidebar_item(index1=3, index2=6)
+        self.go_to_sidebar_item(index1=1, index2=2)
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
-                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[7]/a/button')
         self.click_full_xpath(xpath='/html/body/div[1]/div/section/div/main/div/div[1]/div[2]/div[1]/div[1]/div/div[3]')
         # table12
+        self.click_css_selector(
+            css='#root > div > section > div > main > div > div.ant-card-body > div > div > div > '
+                'div.ant-pro-grid-content > div > div > form > div:nth-child(4) > div.ant-pro-card-body > div > div > '
+                'div.ant-pro-card-body > div > div.ant-col.ant-form-item-control > div > div > div > div')
+        self.click_css_selector(
+            css='body > div:nth-child(8) > div > div > div > div.rc-virtual-list > div.rc-virtual-list-holder > div > '
+                'div')
         self.scroll_to_bottom()
         # 保存
         self.click_css_selector(
             css='#root > div > section > div > main > div > div.ant-card-body > div > div > div > '
-                'div.ant-pro-grid-content > div > div > div.ant-pro-page-container-children-content > form > '
+                'div.ant-pro-grid-content > div > div > form > '
                 'div.ant-space.ant-space-horizontal.ant-space-align-center > div:nth-child(2) > button')
         self.scroll_to_top()
         self.click_full_xpath(xpath='/html/body/div[1]/div/section/div/main/div/div[1]/div[2]/div[1]/div[1]/div/div[4]')
         # 基本信息
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div[2]/div/div/div[1]/form/div[2]/div/div[3]/div/div/div[1]/div/div['
-                  '2]/div/div/span/input',
-            text='张三')
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div[2]/div/div/div[1]/form/div[2]/div/div[3]/div/div/div[2]/div/div[2]/div['
-                  '1]/div/div/div/input')
+        self.input_into_css(css='#step1_评审人', text='评审人')
+        self.click_css_selector(css='#step1_time')
         self.click_css_selector(
             css='body > div:nth-child(8) > div > div > div > div > div.ant-picker-date-panel > div.ant-picker-body > '
                 'table > tbody > tr:nth-child(1) > td:nth-child(2)')
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['
-                  '2]/div/div/div[2]/div/div/div[5]/div/div/button')
+        self.click_css_selector(
+            css='#root > div > section > div > main > div > div.ant-card-body > div > div > div > '
+                'div.ant-pro-grid-content > div > div > div.ant-pro-card > div > div > div:nth-child(2) > div > div > '
+                'div.ant-space.ant-space-horizontal.ant-space-align-center > div > div > button')
         # 软件说明部分评审
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/div['

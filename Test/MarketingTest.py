@@ -7,10 +7,10 @@ class MarketingTest(TestBase):
         self.login(username='shichangbu2', password='1234')
 
     def audit_delegation(self):
-        self.go_to_sidebar_item(index1=3, index2=5)
+        self.go_to_sidebar_item(index1=1, index2=2)
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
-                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[7]/a/button')
         self.click_full_xpath(xpath='/html/body/div[1]/div/section/div/main/div/div[1]/div[2]/div[1]/div[1]/div/div[4]')
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/form/div[1]/div/div[2]/div/div['
@@ -39,7 +39,7 @@ class MarketingTest(TestBase):
         self.click_full_xpath(xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/form/div[4]/button[2]')
 
     def generate_pricing(self):
-        self.go_to_sidebar_item(index1=3, index2=7)
+        self.go_to_sidebar_item(index1=1, index2=3)
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
                   '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
@@ -51,7 +51,7 @@ class MarketingTest(TestBase):
                   '2]/button')
 
     def fill_contract(self):
-        self.go_to_sidebar_item(index1=4, index2=2)
+        self.go_to_sidebar_item(index1=1, index2=4)
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
                   '2]/div/div/div/div/div/table/tbody/tr/td[6]/div/div/a/button')
@@ -98,7 +98,7 @@ class MarketingTest(TestBase):
                   '1]/div/div/div/div[2]/div/div/div[3]/div/div/div/div/div[3]/button')
 
     def audit_contract(self):
-        self.go_to_sidebar_item(index1=4, index2=5)
+        self.go_to_sidebar_item(index1=1, index2=5)
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
                   '2]/div/div/div/div/div/table/tbody/tr/td[6]/div/div/a/button')
@@ -120,7 +120,7 @@ class MarketingTest(TestBase):
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/form/div[3]/button[2]')
 
     def upload_contract(self):
-        self.go_to_sidebar_item(index1=4, index2=6)
+        self.go_to_sidebar_item(index1=1, index2=6)
         self.click_css_selector(
             css='#root > div > section > div > main > div > div.ant-pro-grid-content > div > div > '
                 'div.ant-pro-page-container-children-content > div > div:nth-child(2) > div > div.ant-table-wrapper > '

@@ -7,10 +7,11 @@ class MarketingSupervisorTest(TestBase):
         self.login(username='asdasdas1', password='1234')
 
     def distribute_delegation(self):
-        self.go_to_sidebar_item(index1=3, index2=3)
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
-                  '2]/div/div/div/div/div/table/tbody/tr/td[6]/div/div/button')
+        self.go_to_sidebar_item(index1=1, index2=2)
+        self.click_css_selector(
+            css='#root > div > section > div > main > div > div.ant-pro-grid-content > div > div > div > '
+                'div:nth-child(2) > div > div.ant-table-wrapper > div > div > div > div > div > table > tbody > '
+                'tr:nth-child(1) > td:nth-child(7) > div > div > button')
         self.input_into_xpath(
             xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[2]/form/div/div/div/div/div/div/span[1]/input',
             text='市场部员工2')

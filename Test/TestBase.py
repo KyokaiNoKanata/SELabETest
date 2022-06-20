@@ -35,7 +35,7 @@ class TestBase(object):
         self.wait()
         self.driver.find_element(by=By.XPATH, value=xpath).click()
 
-    def click_css_selector(self, css):
+    def click_css_selector(self, css: object) -> object:
         self.wait()
         self.driver.find_element(by=By.CSS_SELECTOR, value=css).click()
 
