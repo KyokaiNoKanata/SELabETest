@@ -1,4 +1,4 @@
-from Test.TestBase import TestBase
+from Test.TestBase import TestBase, random_string
 
 
 class TestingSupervisorTest(TestBase):
@@ -34,3 +34,11 @@ class TestingSupervisorTest(TestBase):
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[1]/div[2]/div[1]/div[1]/div/div[6]')
         # 审核
         self.click_full_xpath(xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/a/button')
+
+    def fill_project_id(self):
+        self.go_to_sidebar_item(index1=1, index2=4)
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[7]/a/button')
+        self.input_into_css(css='#projectId', text=random_string(10))
+        self.click_full_xpath(xpath='/html/body/div[1]/div/section/div[2]/main/form/div[2]/button[2]')

@@ -126,14 +126,15 @@ class MarketingTest(TestBase):
         self.click_full_xpath(xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[3]/div/div/div[2]/button')
 
     def audit_sample(self):
-        self.go_to_sidebar_item(index1=5, index2=2)
+        self.go_to_sidebar_item(index1=2, index2=2, index3=1)
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
-                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr/td[6]/div/div/a/button')
         self.input_into_css(css='#remark', text='通过')
         self.click_css_selector(
             css='#root > div > section > div > main > form > div > div:nth-child(6) > div > div:nth-child(4) > div > '
                 'div:nth-child(2) > button')
+        self.click_full_xpath(xpath='/html/body/div[5]/div/div[2]/div/div[2]/div/div/div[2]/button[2]')
 
     def send_report(self):
         self.go_to_sidebar_item(index1=7, index2=6)

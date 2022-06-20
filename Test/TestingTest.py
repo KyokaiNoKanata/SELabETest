@@ -72,10 +72,10 @@ class TestingTest(TestBase):
             xpath='/html/body/div[1]/div/section/div/main/form/div/div[7]/div/div[3]/div/div[2]/button')
 
     def fill_solution(self):
-        self.go_to_sidebar_item(index1=6, index2=1)
+        self.go_to_sidebar_item(index1=2, index2=3, index3=2)
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
-                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/a/button')
         # 引言
         # 标识
         self.input_into_css(css='#introduction_1-1\\ 标识', text='标识')
@@ -137,45 +137,41 @@ class TestingTest(TestBase):
         self.click_css_selector(css='#测试进度表_time1')
         self.click_css_selector(
             css='body > div:nth-child(8) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(1) '
-                '> div > div.ant-picker-body > table > tbody > tr:nth-child(2) > '
+                '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > '
                 'td.ant-picker-cell.ant-picker-cell-in-view.ant-picker-cell-today')
         self.click_css_selector(
             css='body > div:nth-child(8) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(2) '
-                '> div > div.ant-picker-body > table > tbody > tr:nth-child(1) > '
-                'td.ant-picker-cell.ant-picker-cell-start.ant-picker-cell-in-view')
+                '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > td:nth-child(4)')
         # 设计测试
         self.input_into_css(css='#测试进度表_workQuantity2', text='制定测试计划')
         self.click_css_selector(css='#测试进度表_time2')
         self.click_css_selector(
             css='body > div:nth-child(9) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(1) '
-                '> div > div.ant-picker-body > table > tbody > tr:nth-child(1) > '
-                'td.ant-picker-cell.ant-picker-cell-start.ant-picker-cell-in-view')
+                '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > '
+                'td.ant-picker-cell.ant-picker-cell-in-view.ant-picker-cell-today')
         self.click_css_selector(
             css='body > div:nth-child(9) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(2) '
-                '> div > div.ant-picker-body > table > tbody > tr:nth-child(1) > '
-                'td.ant-picker-cell.ant-picker-cell-start.ant-picker-cell-in-view')
+                '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > td:nth-child(4)')
         # 执行测试
         self.input_into_css(css='#测试进度表_workQuantity3', text='制定测试计划')
         self.click_css_selector(css='#测试进度表_time3')
         self.click_css_selector(
             css='body > div:nth-child(10) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(1) '
-                '> div > div.ant-picker-body > table > tbody > tr:nth-child(1) > '
-                'td.ant-picker-cell.ant-picker-cell-start.ant-picker-cell-in-view')
+                '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > '
+                'td.ant-picker-cell.ant-picker-cell-in-view.ant-picker-cell-today')
         self.click_css_selector(
             css='body > div:nth-child(10) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(2) '
-                '> div > div.ant-picker-body > table > tbody > tr:nth-child(1) > '
-                'td.ant-picker-cell.ant-picker-cell-start.ant-picker-cell-in-view')
+                '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > td:nth-child(4)')
         # 评估测试
         self.input_into_css(css='#测试进度表_workQuantity4', text='制定测试计划')
         self.click_css_selector(css='#测试进度表_time4')
         self.click_css_selector(
             css='body > div:nth-child(11) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(1) '
-                '> div > div.ant-picker-body > table > tbody > tr:nth-child(1) > '
-                'td.ant-picker-cell.ant-picker-cell-start.ant-picker-cell-in-view')
+                '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > '
+                'td.ant-picker-cell.ant-picker-cell-in-view.ant-picker-cell-today')
         self.click_css_selector(
             css='body > div:nth-child(11) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(2) '
-                '> div > div.ant-picker-body > table > tbody > tr:nth-child(1) > '
-                'td.ant-picker-cell.ant-picker-cell-start.ant-picker-cell-in-view')
+                '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > td:nth-child(4)')
         self.click_css_selector(
             css='#root > div > section > div > main > div > div.ant-card-body > div > div > div > div > div > '
                 'div:nth-child(2) > div > div > div.ant-space.ant-space-horizontal.ant-space-align-center > div > div '
