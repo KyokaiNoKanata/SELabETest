@@ -12,17 +12,14 @@ class CustomerTest(TestBase):
             xpath='/html/body/div[1]/div/section/div/main/div/div[1]/div[2]/div[1]/div[1]/div/div[2]')
 
     def accept_pricing(self):
-        self.go_to_sidebar_item(index1=3, index2=8)
+        self.go_to_sidebar_item(index1=1, index2=2)
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
-                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div[2]/div/form/div[9]/div['
-                  '2]/div/div/span/input',
-            text='kehu2')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr/td[8]/a/button')
+        self.input_into_css(css='#sign', text='张三')
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div[2]/div/form/div[14]/div['
-                  '1]/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[2]/div/form/div[14]/div[1]/button')
+        self.click_full_xpath(xpath='/html/body/div[5]/div/div[2]/div/div[2]/div/div/div[2]/button[2]')
 
     def new_delegation(self, delegation_name=random_string(10)):
         self.go_to_sidebar_item(index1=1, index2=1)
@@ -174,7 +171,7 @@ class CustomerTest(TestBase):
                 'div.ant-space.ant-space-horizontal.ant-space-align-center > div:nth-child(3) > button')
 
     def check_contract(self):
-        self.go_to_sidebar_item(index1=4, index2=4)
+        self.go_to_sidebar_item(index1=1, index2=4)
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
                   '2]/div/div/div/div/div/table/tbody/tr/td[6]/div/div/a/button')
@@ -198,7 +195,7 @@ class CustomerTest(TestBase):
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/form/div[3]/button[2]')
 
     def fill_contract(self):
-        self.go_to_sidebar_item(index1=4, index2=3)
+        self.go_to_sidebar_item(index1=1, index2=3)
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
                   '2]/div/div/div/div/div/table/tbody/tr/td[6]/div/div/a/button')
