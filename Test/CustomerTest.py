@@ -173,8 +173,8 @@ class CustomerTest(TestBase):
     def check_contract(self):
         self.go_to_sidebar_item(index1=1, index2=4)
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
-                  '2]/div/div/div/div/div/table/tbody/tr/td[6]/div/div/a/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr/td[8]/a/button')
         self.scroll_to_top()
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[1]/div[2]/div[1]/div[1]/div/div[3]')
@@ -197,28 +197,28 @@ class CustomerTest(TestBase):
     def fill_contract(self):
         self.go_to_sidebar_item(index1=1, index2=3)
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
-                  '2]/div/div/div/div/div/table/tbody/tr/td[6]/div/div/a/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr/td[8]/a/button')
         # 保密协议
         self.scroll_to_bottom()
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div['
-                  '1]/form/div/div[2]/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/form/div[2]/div['
+                  '2]/button')
         self.scroll_to_top()
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[1]/div[2]/div[1]/div[1]/div/div[2]/div')
         # 合同第一页
         self.scroll_to_bottom()
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div['
-                  '1]/div/div/div/div[2]/div/div/div[3]/div/div/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div/div/div/div['
+                  '2]/div/div/div[3]/div/div/button')
         # 签章
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div['
-                  '1]/div/div/div/div[2]/div/div/div[3]/div/div/div/div/div[2]/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div/div/div/div['
+                  '2]/div/div/div[3]/div/div/div/div/div[2]/button')
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div['
-                  '1]/div/div/div/div[2]/div/div/div[3]/div/div/div/div/div[3]/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/div/div/div/div['
+                  '2]/div/div/div[3]/div/div/div/div/div[3]/button')
 
     def upload_sample(self):
         self.go_to_sidebar_item(index1=5, index2=1)

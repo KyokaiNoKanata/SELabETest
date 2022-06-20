@@ -96,8 +96,8 @@ class MarketingTest(TestBase):
     def audit_contract(self):
         self.go_to_sidebar_item(index1=1, index2=5)
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
-                  '2]/div/div/div/div/div/table/tbody/tr/td[6]/div/div/a/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[7]/a/button')
         self.scroll_to_top()
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[1]/div[2]/div[1]/div[1]/div/div[3]')
@@ -117,10 +117,9 @@ class MarketingTest(TestBase):
 
     def upload_contract(self):
         self.go_to_sidebar_item(index1=1, index2=6)
-        self.click_css_selector(
-            css='#root > div > section > div > main > div > div.ant-pro-grid-content > div > div > '
-                'div.ant-pro-page-container-children-content > div > div:nth-child(2) > div > div.ant-table-wrapper > '
-                'div > div > div > div > div > table > tbody > tr:nth-child(1) > td:nth-child(6) > div > div > button')
+        self.click_full_xpath(
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[7]/button')
         self.upload_into_xpath(
             xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[2]/form/div/div/div/span/div[1]',
             file='C:\\Users\\Yui\\OneDrive\\图片\\Kaguya.jpg')

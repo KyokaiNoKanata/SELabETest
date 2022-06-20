@@ -35,7 +35,7 @@ class TestBase(object):
         self.wait()
         self.driver.find_element(by=By.XPATH, value=xpath).click()
 
-    def click_css_selector(self, css: object) -> object:
+    def click_css_selector(self, css):
         self.wait()
         self.driver.find_element(by=By.CSS_SELECTOR, value=css).click()
 
@@ -61,9 +61,12 @@ class TestBase(object):
         dialog.wait(wait_for='ready', timeout=10)
         dialog.Open.click()
 
-    def go_to_sidebar_item(self, index1, index2):
+    def go_to_sidebar_item(self, index1, index2, index3=None):
         self.click_full_xpath(xpath=f'/html/body/div[1]/div/section/aside/div/div[1]/ul/li[{index1}]/div/span')
         self.click_full_xpath(xpath=f'/html/body/div[1]/div/section/aside/div/div[1]/ul/li[{index1}]/ul/li[{index2}]')
+        if index3 is not None:
+            self.click_full_xpath(
+                f'/html/body/div[1]/div/section/aside/div/div[1]/ul/li[{index1}]/ul/li[{index2}]/ul/li[{index3}]/span')
 
     def login(self, username='kehu2', password='1234'):
         self.input_into_xpath(xpath='/html/body/div[1]/div/div[2]/div/div[2]/form/div[2]/div/div/div/span/input',
