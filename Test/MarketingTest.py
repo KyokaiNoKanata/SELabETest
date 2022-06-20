@@ -41,14 +41,13 @@ class MarketingTest(TestBase):
     def generate_pricing(self):
         self.go_to_sidebar_item(index1=1, index2=3)
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
-                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/div/div/a/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr/td[7]/a/button')
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div[2]/div/form/div[14]/div['
-                  '1]/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[2]/div/form/div[14]/div[1]/button')
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div[2]/div/form/div[14]/div['
-                  '2]/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[2]/div/form/div[14]/div[2]/button')
+        self.click_full_xpath(xpath='/html/body/div[5]/div/div[2]/div/div[2]/div/div/div[2]/button[2]')
 
     def fill_contract(self):
         self.go_to_sidebar_item(index1=1, index2=4)
