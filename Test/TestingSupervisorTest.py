@@ -18,22 +18,26 @@ class TestingSupervisorTest(TestBase):
         self.click_full_xpath(xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[3]/div/div/div[2]/button')
 
     def audit_report(self):
-        self.go_to_sidebar_item(index1=7, index2=2)
+        self.go_to_sidebar_item(index1=2, index2=4, index3=3)
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
-                  '2]/div/div/div/div/div/table/tbody/tr/td[6]/div/div/a/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/a/button')
         self.scroll_to_top()
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[1]/div[2]/div[1]/div[1]/div/div[5]')
         # 测试报告检查表
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/div/div[2]/div/div/div[1]/form/div['
-                  '4]/div[1]/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div/form/div[4]/div['
+                  '1]/button')
         self.scroll_to_top()
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[1]/div[2]/div[1]/div[1]/div/div[6]')
-        # 审核
-        self.click_full_xpath(xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/a/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[1]/div[2]/div[1]/div[1]/div/div[7]/div')
+        self.click_css_selector(css='#pass')
+        self.click_css_selector(
+            css='body > div:nth-child(8) > div > div > div > div.rc-virtual-list > div.rc-virtual-list-holder > div > '
+                'div > div.ant-select-item.ant-select-item-option.ant-pro-filed-search-select-option.ant-select-item'
+                '-option-active > div')
+        self.click_full_xpath(xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/form/div[3]/button[2]')
 
     def fill_project_id(self):
         self.go_to_sidebar_item(index1=1, index2=4)

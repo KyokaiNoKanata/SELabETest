@@ -240,10 +240,10 @@ class CustomerTest(TestBase):
         self.click_full_xpath(xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[3]/div/div/div[2]/button')
 
     def audit_report(self):
-        self.go_to_sidebar_item(index1=7, index2=3)
+        self.go_to_sidebar_item(index1=2, index2=4, index3=2)
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
-                  '2]/div/div/div/div/div/table/tbody/tr/td[6]/div/div/a/button')
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div['
+                  '2]/div/div/div/div/div/table/tbody/tr[1]/td[6]/a/button')
         self.scroll_to_top()
         self.click_full_xpath(xpath='/html/body/div[1]/div/section/div/main/div/div[1]/div[2]/div[1]/div[1]/div/div[6]')
         self.click_full_xpath(xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/a/button')
