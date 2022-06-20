@@ -221,9 +221,9 @@ class CustomerTest(TestBase):
                   '2]/div/div/div[3]/div/div/div/div/div[3]/button')
 
     def upload_sample(self):
-        self.go_to_sidebar_item(index1=5, index2=1)
+        self.go_to_sidebar_item(index1=2, index2=2, index3=2)
         self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div[1]/div/div[2]/div/div['
+            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div['
                   '2]/div/div/div/div/div/table/tbody/tr/td[6]/div/div/button')
         self.upload_into_xpath(
             xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[2]/form/div[1]/div/div/span/div[1]/span/button',
