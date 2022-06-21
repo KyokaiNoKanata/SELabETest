@@ -12,7 +12,7 @@ from Test.TestingTest import TestingTest
 
 
 class MyTestCase(unittest.TestCase):
-    def testcase1(self):
+    def testcase01(self):
         """用户新建并填写委托"""
         c = CustomerTest()
         c.new_delegation()
@@ -22,56 +22,56 @@ class MyTestCase(unittest.TestCase):
         c.quit()
         pass
 
-    def testcase2(self):
+    def testcase02(self):
         """市场部主管分配人员"""
         ms = MarketingSupervisorTest()
         ms.distribute_delegation()
         ms.quit()
         pass
 
-    def testcase3(self):
+    def testcase03(self):
         """测试部主管分配人员"""
         ts = TestingSupervisorTest()
         ts.distribute_delegation()
         ts.quit()
         pass
 
-    def testcase4(self):
+    def testcase04(self):
         """市场部审核委托"""
         m = MarketingTest()
         m.audit_delegation()
         m.quit()
         pass
 
-    def testcase5(self):
+    def testcase05(self):
         """市场部审核委托"""
         t = TestingTest()
         t.audit_delegation()
         t.quit()
         pass
 
-    def testcase6(self):
+    def testcase06(self):
         """市场部生成报价"""
         m = MarketingTest()
         m.generate_pricing()
         m.quit()
         pass
 
-    def testcase7(self):
+    def testcase07(self):
         """客户接受报价"""
         c = CustomerTest()
         c.accept_pricing()
         c.quit()
         pass
 
-    def testcase8(self):
+    def testcase08(self):
         """市场部填写合同"""
         m = MarketingTest()
         m.fill_contract()
         m.quit()
         pass
 
-    def testcase9(self):
+    def testcase09(self):
         """客户检查合同"""
         c = CustomerTest()
         c.check_contract()
