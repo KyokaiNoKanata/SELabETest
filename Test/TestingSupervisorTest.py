@@ -11,9 +11,7 @@ class TestingSupervisorTest(TestBase):
         self.click_full_xpath(
             xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/div/div[2]/div/div['
                   '2]/div/div/div/div/div/table/tbody/tr/td[7]/div/div/button')
-        self.input_into_xpath(
-            xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[2]/form/div/div/div/div/div/div/span[1]/input',
-            text='测试部员工2')
+        self.click_css_selector(css='#acceptorId')
         self.click_full_xpath(xpath='/html/body/div[6]/div/div/div/div[2]/div[1]/div/div/div')
         self.click_full_xpath(xpath='/html/body/div[5]/div/div[2]/div/div[2]/div[3]/div/div/div[2]/button')
 

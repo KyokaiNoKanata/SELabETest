@@ -19,20 +19,13 @@ class MarketingTest(TestBase):
                                     'div.rc-virtual-list-holder > div > div > '
                                     'div.ant-select-item.ant-select-item-option.ant-pro-filed-search-select-option'
                                     '.ant-select-item-option-active')
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/form/div[2]/div/div[2]/div/div['
-                  '2]/div/div/div/div/span[1]/input')
+        self.click_css_selector(css='#受理意见')
         self.click_css_selector(
             css='body > div:nth-child(9) > div > div > div > div.rc-virtual-list > div.rc-virtual-list-holder > div > '
                 'div > div.ant-select-item.ant-select-item-option.ant-pro-filed-search-select-option.ant-select-item'
                 '-option-active')
-        self.input_into_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/form/div[3]/div/div[2]/div/div['
-                  '2]/div/div/span/input',
-            text='张三')
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div/main/div/div[2]/div/div/form/div[3]/div/div[3]/div/div['
-                  '2]/div/div/div/div/input')
+        self.input_into_css(css='#受理人（签字）', text='张三')
+        self.click_css_selector(css='#受理人_日期')
         self.click_css_selector(
             css='body > div:nth-child(10) > div > div > div > div > div.ant-picker-date-panel > div.ant-picker-body > '
                 'table > tbody > tr:nth-child(1) > td:nth-child(2)')

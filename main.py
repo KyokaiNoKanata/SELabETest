@@ -49,7 +49,7 @@ class MyTestCase(unittest.TestCase):
 
     @staticmethod
     def testcase05():
-        """市场部审核委托"""
+        """测试部审核委托"""
         t = TestingTest()
         t.audit_delegation()
         t.quit()

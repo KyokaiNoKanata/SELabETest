@@ -50,7 +50,7 @@ class TestingTest(TestBase):
         # 审核意见
         self.click_css_selector(css='#step4_是否通过')
         self.click_css_selector(
-            css='body > div:nth-child(9) > div > div > div > div.rc-virtual-list > div.rc-virtual-list-holder > div > '
+            css='body > div:nth-child(8) > div > div > div > div.rc-virtual-list > div.rc-virtual-list-holder > div > '
                 'div > div.ant-select-item.ant-select-item-option.ant-pro-filed-search-select-option.ant-select-item'
                 '-option-active')
         self.click_full_xpath(
