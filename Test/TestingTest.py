@@ -137,41 +137,41 @@ class TestingTest(TestBase):
         self.click_css_selector(css='#测试进度表_time1')
         self.click_css_selector(
             css='body > div:nth-child(8) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(1) '
-                '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > '
-                'td.ant-picker-cell.ant-picker-cell-in-view.ant-picker-cell-today')
+                '> div > div.ant-picker-body > table > tbody > tr:nth-child(1) > '
+                'td.ant-picker-cell.ant-picker-cell-start.ant-picker-cell-in-view')
         self.click_css_selector(
             css='body > div:nth-child(8) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(2) '
-                '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > td:nth-child(4)')
+                '> div > div.ant-picker-body > table > tbody > tr:nth-child(2) > td:nth-child(6)')
         # 设计测试
         self.input_into_css(css='#测试进度表_workQuantity2', text='制定测试计划')
         self.click_css_selector(css='#测试进度表_time2')
         self.click_css_selector(
             css='body > div:nth-child(9) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(1) '
-                '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > '
-                'td.ant-picker-cell.ant-picker-cell-in-view.ant-picker-cell-today')
+                '> div > div.ant-picker-body > table > tbody > tr:nth-child(1) > '
+                'td.ant-picker-cell.ant-picker-cell-start.ant-picker-cell-in-view')
         self.click_css_selector(
             css='body > div:nth-child(9) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(2) '
-                '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > td:nth-child(4)')
+                '> div > div.ant-picker-body > table > tbody > tr:nth-child(2) > td:nth-child(6)')
         # 执行测试
         self.input_into_css(css='#测试进度表_workQuantity3', text='制定测试计划')
         self.click_css_selector(css='#测试进度表_time3')
         self.click_css_selector(
             css='body > div:nth-child(10) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(1) '
-                '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > '
-                'td.ant-picker-cell.ant-picker-cell-in-view.ant-picker-cell-today')
+                '> div > div.ant-picker-body > table > tbody > tr:nth-child(1) > '
+                'td.ant-picker-cell.ant-picker-cell-start.ant-picker-cell-in-view')
         self.click_css_selector(
             css='body > div:nth-child(10) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(2) '
-                '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > td:nth-child(4)')
+                '> div > div.ant-picker-body > table > tbody > tr:nth-child(2) > td:nth-child(6)')
         # 评估测试
         self.input_into_css(css='#测试进度表_workQuantity4', text='制定测试计划')
         self.click_css_selector(css='#测试进度表_time4')
         self.click_css_selector(
             css='body > div:nth-child(11) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(1) '
-                '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > '
-                'td.ant-picker-cell.ant-picker-cell-in-view.ant-picker-cell-today')
+                '> div > div.ant-picker-body > table > tbody > tr:nth-child(1) > '
+                'td.ant-picker-cell.ant-picker-cell-start.ant-picker-cell-in-view')
         self.click_css_selector(
             css='body > div:nth-child(11) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(2) '
-                '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > td:nth-child(4)')
+                '> div > div.ant-picker-body > table > tbody > tr:nth-child(2) > td:nth-child(6)')
         self.click_css_selector(
             css='#root > div > section > div > main > div > div.ant-card-body > div > div > div > div > div > '
                 'div:nth-child(2) > div > div > div.ant-space.ant-space-horizontal.ant-space-align-center > div > div '
@@ -235,14 +235,12 @@ class TestingTest(TestBase):
         self.input_into_css(css='#step2_版本\\/型号', text='版本')
         self.click_css_selector(css='#step2_来样日期')
         self.click_css_selector(css='body > div:nth-child(8) > div > div > div > div > div.ant-picker-date-panel > '
-                                    'div.ant-picker-body > table > tbody > tr:nth-child(4) > '
-                                    'td.ant-picker-cell.ant-picker-cell-in-view.ant-picker-cell-today')
+                                    'div.ant-picker-body > table > tbody > tr:nth-child(3) > td:nth-child(3)')
         self.input_into_css(css='#step2_测试类型', text='测试类型')
         self.click_css_selector(css='#step2_测试时间')
         self.click_css_selector(
             css='body > div:nth-child(9) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(1) '
-                '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > '
-                'td.ant-picker-cell.ant-picker-cell-in-view.ant-picker-cell-today')
+                '> div > div.ant-picker-body > table > tbody > tr:nth-child(3) > td:nth-child(3)')
         self.click_css_selector(
             css='body > div:nth-child(9) > div > div > div > div.ant-picker-panel-container > div > div:nth-child(2) '
                 '> div > div.ant-picker-body > table > tbody > tr:nth-child(4) > td:nth-child(4)')
@@ -253,17 +251,17 @@ class TestingTest(TestBase):
         self.click_css_selector(css='#step2_主测_日期')
         self.click_css_selector(
             css='body > div:nth-child(10) > div > div > div > div > div.ant-picker-date-panel > div.ant-picker-body > '
-                'table > tbody > tr:nth-child(4) > td.ant-picker-cell.ant-picker-cell-in-view.ant-picker-cell-today')
+                'table > tbody > tr:nth-child(3) > td:nth-child(3)')
         self.input_into_css(css='#step2_审核人', text='审核人')
         self.click_css_selector(css='#step2_审核_日期')
         self.click_css_selector(
             css='body > div:nth-child(11) > div > div > div > div > div.ant-picker-date-panel > div.ant-picker-body > '
-                'table > tbody > tr:nth-child(4) > td.ant-picker-cell.ant-picker-cell-in-view.ant-picker-cell-today')
+                'table > tbody > tr:nth-child(3) > td:nth-child(3)')
         self.input_into_css(css='#step2_批准人', text='批准人')
         self.click_css_selector(css='#step2_批准_日期')
         self.click_css_selector(
             css='body > div:nth-child(12) > div > div > div > div > div.ant-picker-date-panel > div.ant-picker-body > '
-                'table > tbody > tr:nth-child(4) > td.ant-picker-cell.ant-picker-cell-in-view.ant-picker-cell-today')
+                'table > tbody > tr:nth-child(3) > td:nth-child(3)')
         self.input_into_css(css='#step2_电话', text='电话')
         self.input_into_css(css='#step2_传真', text='传真')
         self.input_into_css(css='#step2_地址', text='地址')

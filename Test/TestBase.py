@@ -14,7 +14,7 @@ def random_string(length):
 class TestBase(object):
     def __init__(self):
         self.driver = webdriver.Chrome()
-        self.driver.get("http://localhost:8000/")
+        self.driver.get("http://210.28.133.13:21289")
         self.wait()
 
     def wait(self):

@@ -184,9 +184,7 @@ class CustomerTest(TestBase):
                   '2]/div/div/span/input',
             text='这是好的')
         # 是否通过
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/form/div[2]/div/div/div/div['
-                  '2]/div/div/div/div/span[1]/input')
+        self.click_css_selector(css='#pass')
         self.click_css_selector(
             css='body > div:nth-child(8) > div > div > div > div.rc-virtual-list > div.rc-virtual-list-holder > div > '
                 'div > div.ant-select-item.ant-select-item-option.ant-pro-filed-search-select-option.ant-select-item'

@@ -60,11 +60,6 @@ class MarketingTest(TestBase):
         # 合同第一页
         # 合同签订地点
         self.input_into_css(css='#step1_签订地点', text='南京')
-        # 签订日期
-        self.click_css_selector(css='#step1 > div:nth-child(6) > div.ant-col.ant-form-item-control > div > div > div')
-        self.click_css_selector(
-            css='body > div:nth-child(8) > div > div > div > div > div.ant-picker-date-panel > div.ant-picker-body > '
-                'table > tbody > tr:nth-child(1) > td.ant-picker-cell.ant-picker-cell-start.ant-picker-cell-in-view')
         # 质量特性
         self.input_into_css(css='#step1_质量特性', text='质量特性')
         # 合同价款
@@ -98,9 +93,7 @@ class MarketingTest(TestBase):
             xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/form/div[1]/div/div/div/div['
                   '2]/div/div/span/input',
             text='通过')
-        self.click_full_xpath(
-            xpath='/html/body/div[1]/div/section/div[2]/main/div/div[2]/div/div/form/div[2]/div/div/div/div['
-                  '2]/div/div/div/div/span[1]/input')
+        self.click_css_selector(css='#pass')
         self.click_css_selector(
             css='body > div:nth-child(8) > div > div > div > div.rc-virtual-list > div.rc-virtual-list-holder > div > '
                 'div > div.ant-select-item.ant-select-item-option.ant-pro-filed-search-select-option.ant-select-item'
